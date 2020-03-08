@@ -1,0 +1,3 @@
+paper1: http://kontext.fraunhofer.de/haenelt/kurs/folien/Haenelt_Viterbi-Tutor.pdf
+paper2: https://people.eecs.berkeley.edu/~russell/papers/uai11-viterbi.pdf
+paper3:	https://www.researchgate.net/publication/305402054_VITERBI_ALGORITHM/download

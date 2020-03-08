@@ -1,0 +1,16 @@
+- original data sequence is attempted to be recreated, using HMM and sequence of emission values
+- for calculations, the transitional matrix is given through the HMM
+- also providing initial transition matrix
+- matrix of emission probabilities per state through sequence of emission values
+- building maximum reachable paths from start to finish
+- paths to state s' until timestep t + 1 are formed, using the maximum path for state s until timestep t, so that 
+  transition s -> s' from t -> t + 1 is highest probable transition
+- finally max reachable probability for state s until timestep t is then multiplied with probability to emit
+  specific symbol on timestep t
+- for each calculated max reachable probability by state, the previous state, that was used to build the probability for
+  the current state, is saved alongside the probability
+- highest probability end state is then deciphered using state at final timestep with highest reachability probability
+- highest probability path is then deciphered by back-propagating from highest probability end state to beginning,
+  by iterating alongside previously saved states, that contributed to the max reachable probability per state
+- resulting path then is the attempted recreation of the original data sequence
+- algorithm will have relatively low amount of errors, though it can not ensure perfect sequence recreations
